@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+    <h1>Teste de XSS</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Digite algo">
+        <button type="submit">Enviar</button>
+    </form>
+    {% if message %}
+        <p>Você digitou: {{ message }}</p>
+    {% endif %}
+{% endblock %}
